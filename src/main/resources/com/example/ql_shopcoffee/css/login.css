@@ -1,0 +1,111 @@
+/* Root Style Variables */
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Background */
+.login-background {
+    -fx-background-color: linear-gradient(to bottom right, #2C3E50, #34495E);
+}
+
+/* Login Container */
+.login-container {
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 20, 0, 0, 5);
+    -fx-padding: 40px;
+}
+
+/* Text Fields */
+.text-field, .password-field {
+    -fx-background-color: #F8F9FA;
+    -fx-background-radius: 8px;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+    -fx-padding: 12px;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #3498DB;
+    -fx-border-width: 2px;
+    -fx-background-color: white;
+}
+
+/* Login Button */
+.login-button {
+    -fx-background-color: linear-gradient(to bottom, #3498DB, #2980B9);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.4), 10, 0, 0, 3);
+}
+
+.login-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #2980B9, #21618C);
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.6), 15, 0, 0, 5);
+}
+
+.login-button:pressed {
+    -fx-background-color: #21618C;
+    -fx-translate-y: 2px;
+}
+
+.login-button:disabled {
+    -fx-opacity: 0.6;
+    -fx-cursor: default;
+}
+
+/* Error Label */
+.error-label {
+    -fx-text-fill: #E74C3C;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-color: #FADBD8;
+    -fx-padding: 8px;
+    -fx-background-radius: 5px;
+}
+
+/* Labels */
+.label-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.label-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #BDC3C7;
+}
+
+.label-field {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50;
+}
+
+/* CheckBox */
+.check-box {
+    -fx-font-size: 12px;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color: #BDC3C7;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #3498DB;
+}
+
+/* Footer Info */
+.info-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #95A5A6;
+}

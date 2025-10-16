@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.ql_shopcoffee.controllers.LoginController"
+            prefHeight="500.0" prefWidth="400.0"
+            style="-fx-background-color: #2C3E50;">
+
+    <VBox alignment="CENTER" spacing="25.0" AnchorPane.topAnchor="0.0"
+          AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0">
+
+        <padding>
+            <Insets top="40" right="40" bottom="40" left="40"/>
+        </padding>
+
+        <VBox alignment="CENTER" spacing="10.0">
+            <Label text="☕" style="-fx-font-size: 60px;"/>
+            <Label text="COFFEE SHOP" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+            <Label text="Hệ Thống Quản Lý" style="-fx-font-size: 14px; -fx-text-fill: #BDC3C7;"/>
+        </VBox>
+
+        <VBox spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+
+            <VBox spacing="8.0">
+                <Label text="Tên đăng nhập" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #2C3E50;"/>
+                <TextField fx:id="usernameField"
+                           promptText="Nhập username"
+                           style="-fx-font-size: 14px; -fx-padding: 10;"
+                           onAction="#handleLogin"/>
+            </VBox>
+
+            <VBox spacing="8.0">
+                <Label text="Mật khẩu" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #2C3E50;"/>
+                <PasswordField fx:id="passwordField"
+                               promptText="Nhập password"
+                               style="-fx-font-size: 14px; -fx-padding: 10;"
+                               onAction="#handleLogin"/>
+            </VBox>
+
+            <Label fx:id="errorLabel"
+                   textFill="red"
+                   wrapText="true"
+                   style="-fx-font-size: 12px;"
+                   visible="false"
+                   managed="false"/>
+
+            <Button fx:id="loginButton"
+                    text="Đăng nhập"
+                    onAction="#handleLogin"
+                    prefWidth="Infinity"
+                    style="-fx-background-color: #3498DB; -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-padding: 12; -fx-background-radius: 5;"
+                    onMouseEntered="#handleLoginButtonHover"
+                    onMouseExited="#handleLoginButtonExit"/>
+
+            <CheckBox fx:id="rememberMeCheckbox"
+                      text="Ghi nhớ đăng nhập"
+                      style="-fx-font-size: 12px;"/>
+
+        </VBox>
+
+        <!-- Footer -->
+        <VBox alignment="CENTER" spacing="5.0">
+            <Label text="Tài khoản mặc định:" style="-fx-font-size: 11px; -fx-text-fill: #BDC3C7;"/>
+            <Label text="Manager: admin / 123456" style="-fx-font-size: 11px; -fx-text-fill: #95A5A6;"/>
+            <Label text="Employee: nhanvien1 / 123456" style="-fx-font-size: 11px; -fx-text-fill: #95A5A6;"/>
+        </VBox>
+
+    </VBox>
+
+</AnchorPane>
