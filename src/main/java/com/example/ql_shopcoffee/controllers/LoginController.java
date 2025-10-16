@@ -22,7 +22,6 @@ public class LoginController {
     @FXML private Button loginButton;
     @FXML private TextField usernameField;
     @FXML private PasswordField passwordField;
-    @FXML private CheckBox rememberMeCheckbox;
 
     private final AuthService authService;
     private final SceneManager sceneManager;
@@ -211,16 +210,4 @@ public class LoginController {
                         "-fx-background-radius: 5;"
         );
     }
-
-    /**
-     * Xử lý quên mật khẩu (optional)
-     */
-    @FXML
-    public void handleForgotPassword() {
-        AlertUtil.showInfo(
-                "Quên mật khẩu",
-                "Vui lòng liên hệ quản trị viên để đặt lại mật khẩu."
-        );
-    }
-
 }
